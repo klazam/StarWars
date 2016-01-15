@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("form").submit(function( event ) {
 
-		/* Kod dodany w zwiazku z odpowiedzia Pana Marcina: "Nie powinno byc kakofonii" */
+		/* usuniecie kakofoni */
 
 		if ($("audio")) {
 			$("audio").remove();
