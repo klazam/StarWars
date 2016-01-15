@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	list-style: none;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+input[type=checkbox] {
+    display:none;
+}
+
+input[type=checkbox] + label {
+	border: solid 3px white;
+	position: relative;
+	border-radius: 20px;
+	height: 250px;
+	width: 250px;
+	display:inline-block;
+	cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+	border: solid 3px black;
+	height: 250px;
+	width: 250px;
+	display:inline-block;
+}
+
+#checkbox_yoda + label {
+	background: url("../images/yoda.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#checkbox_trooper + label {
+	background: url("../images/trooper.png");
+	background-repeat: no-repeat;
+}
+
+#checkbox_vader + label {
+	background: url("../images/vader.png");
+	background-repeat: no-repeat;
+}
+
+label {
+	font-size: 0;
+}
+
+input[type=checkbox] + label::after {
+	content: attr(data-sentence);
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding: auto;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	background: rgba(0,0,0,0.8);
+	opacity: 0;
+	vertical-align: middle;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+}
+
+input[type=checkbox] + label:hover::after {
+	opacity: 1;
+}
+
+
+
+button {
+	margin-top: 20px;
+	position: relative;
+	border: none;
+	width: 350px;
+	height: 80px;
+	background: #000;
+	font-size: 2em;
+	color: #FFDB35;
+}
+
+button::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: -40px;
+	border-top: 40px solid transparent;
+	border-left: 40px solid black;
+	border-bottom: 40px solid transparent;
+}
+
+button:hover {
+	color: #000;
+	background: #FFDB35;
+}
+
+button:hover::after {
+	border-top: 40px solid transparent;
+	border-left: 40px solid #FFDB35;
+	border-bottom: 40px solid transparent;
+}
+
+
+
