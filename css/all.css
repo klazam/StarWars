@@ -21,7 +21,7 @@ input[type=checkbox] {
 }
 
 input[type=checkbox] + label {
-	border: solid 3px white;
+	border: solid 3px transparent;
 	position: relative;
 	border-radius: 20px;
 	height: 250px;
